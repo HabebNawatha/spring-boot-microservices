@@ -48,7 +48,6 @@ public class AccountsController {
     @Autowired
     private Environment environment;
 
-
     @Autowired
     private AccountsContactInfoDto accountsContactInfoDto;
 
