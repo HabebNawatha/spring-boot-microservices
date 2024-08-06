@@ -26,9 +26,17 @@ management:
     web:
       exposure:
         include: "*"
+  health:
+    readiness-state:
+      enabled: true
+    liveness-state:
+      enabled: true
   endpoint:
     shutdown:
       enabled: true
+    health:
+      probes:
+        enabled: true
   info:
     env:
       enabled: true
@@ -36,7 +44,6 @@ management:
 endpoints:
   shutdown:
     enabled: true
-
 
 eureka:
   instance:
@@ -50,5 +57,11 @@ eureka:
 info:
   app:
     name: "loans"
-    description: "Eazy Bank loans Application"
+    description: "Eazy Bank Loans Application"
     version: "1.0.0"
+
+logging:
+  level:
+    com:
+      eazybytes:
+        loans: DEBUG
