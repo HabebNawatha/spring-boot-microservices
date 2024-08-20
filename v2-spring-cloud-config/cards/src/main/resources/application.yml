@@ -34,6 +34,9 @@ management:
   endpoint:
     shutdown:
       enabled: true
+    health:
+      probes:
+        enabled: true
   info:
     env:
       enabled: true
@@ -41,7 +44,6 @@ management:
 endpoints:
   shutdown:
     enabled: true
-
 
 eureka:
   instance:
@@ -55,7 +57,7 @@ eureka:
 info:
   app:
     name: "cards"
-    description: "Eazy Bank cards Application"
+    description: "Eazy Bank Cards Application"
     version: "1.0.0"
 
 logging:
